@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="VORTEX — a cinematic digital experience. Six frames, one continuous journey.">
+  <title>VORTEX — Enter the Frame</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="shortcut icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="loading">
+  <div class="preloader" id="preloader" aria-label="Loading">
+    <div class="loader-mark">V<span>/</span></div>
+    <div class="loader-track"><span id="loaderBar"></span></div>
+    <p>INITIALIZING EXPERIENCE <b id="loaderPercent">00</b></p>
+  </div>
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Vortex home">
+      <span class="brand-symbol">V<span>✳</span></span>
+      <span class="brand-name">VORTEX<small>CREATIVE SYSTEMS</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home" data-nav-group="home">HOME</a>
+      <a class="nav-link" href="#manifesto" data-nav-group="story">STORY</a>
+      <a class="nav-link" href="#sequence" data-nav-group="worlds">WORLDS</a>
+      <a class="nav-link nav-contact" href="#finale" data-nav-group="contact">LET'S BEGIN <span>↗</span></a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="mainNav" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="film-section hero" id="home" data-scene="0">
+      <video class="section-video hero-video" muted playsinline loop preload="auto" poster="assets/logo.png" aria-label="Background video one"><source src="assets/1.mp4" type="video/mp4"></video>
+      <div class="section-shade hero-shade"></div><div class="hero-grid" aria-hidden="true"></div>
+      <div class="section-content hero-content">
+        <div class="eyebrow"><span class="live-dot"></span> DIGITAL WORLDS. REAL FEELING.</div>
+        <h1 class="hero-title"><span>BEYOND</span><span class="outline-word">THE FRAME<span class="period">.</span></span></h1>
+        <p class="hero-copy">A new perspective on cinematic storytelling.<br>Built to move you. Designed to stay with you.</p>
+        <div class="hero-actions">
+          <a href="#sequence" class="button button-light"><span>EXPLORE THE SEQUENCE</span><span class="button-arrow">↗</span></a>
+          <button class="sound-button" id="soundToggle" aria-pressed="false"><span class="sound-icon">♪</span><span id="soundLabel">SOUND OFF</span></button>
+        </div>
+      </div>
+      <div class="hero-index"><span>V / 001</span><span>THE ARRIVAL</span></div>
+      <div class="hero-bottom"><span class="scroll-cue"><i></i> SCROLL TO DISCOVER</span><div class="video-progress-wrap"><span id="videoProgress"></span></div><span class="sequence-counter"><b id="currentScene">01</b> <i>/</i> 06</span></div>
+      <a class="skip-scene" href="#manifesto">NEXT SECTION <span>↘</span></a>
+    </section>
+
+    <section class="film-section manifesto section-pad" id="manifesto" data-scene="1">
+      <video class="section-video" muted playsinline loop preload="metadata" poster="assets/logo.png" aria-label="Background video two"><source src="assets/2.mp4" type="video/mp4"></video>
+      <div class="section-shade light-shade"></div>
+      <div class="section-kicker"><span>01 / THE IDEA</span><span>NO STATIC. NO LIMITS.</span></div>
+      <div class="manifesto-layout section-content">
+        <h2>MAKE IT<br><span class="muted-word">FEEL</span> <span class="italic-word">REAL.</span></h2>
+        <div class="manifesto-copy"><div class="mini-line"></div><p class="large-copy">The best experiences don't ask for attention. <em>They earn it.</em></p><p class="body-copy">VORTEX brings motion, atmosphere and technology together in one immersive canvas. Six frames. One continuous journey. A world that changes every time you look closer.</p><a class="text-link" href="#vision">DISCOVER THE EXPERIENCE <span>↘</span></a></div>
+      </div>
+      <span class="section-number">02</span>
+    </section>
+
+    <section class="film-section vision section-pad" id="vision" data-scene="2">
+      <video class="section-video" muted playsinline loop preload="metadata" poster="assets/logo.png" aria-label="Background video three"><source src="assets/3.mp4" type="video/mp4"></video>
+      <div class="section-shade dark-shade"></div>
+      <div class="section-kicker"><span>02 / THE VISION</span><span>IMAGINATION IN MOTION</span></div>
+      <div class="vision-content section-content">
+        <p class="eyebrow">NOT JUST A WEBSITE. AN ATMOSPHERE.</p>
+        <h2>SEE<br>WHAT'S <span>BEYOND.</span></h2>
+        <p class="vision-copy">A moving canvas where every detail has a purpose. Six cinematic worlds, one seamless experience.</p>
+        <a class="button button-light" href="#craft"><span>GO DEEPER</span><span class="button-arrow">↗</span></a>
+      </div>
+      <span class="section-number">03</span>
+    </section>
+
+    <section class="film-section craft section-pad" id="craft" data-scene="3">
+      <video class="section-video" muted playsinline loop preload="metadata" poster="assets/logo.png" aria-label="Background video four"><source src="assets/4.mp4" type="video/mp4"></video>
+      <div class="section-shade dark-shade"></div>
+      <div class="section-kicker"><span>03 / THE CRAFT</span><span>BUILT FRAME BY FRAME</span></div>
+      <div class="craft-content section-content">
+        <div><p class="eyebrow">DETAIL IS THE DIFFERENCE</p><h2>EVERY<br>FRAME<br><span>MATTERS.</span></h2></div>
+        <div class="craft-side"><span class="craft-rule"></span><p>Purposeful motion. Minimal interface. Maximum atmosphere.</p><p class="craft-small">The visuals lead. The interface gets out of the way. The experience stays with you.</p><a class="text-link light-link" href="#sequence">VIEW ALL FRAMES <span>↘</span></a></div>
+      </div>
+      <span class="section-number">04</span>
+    </section>
+
+    <section class="film-section sequence section-pad" id="sequence" data-scene="4">
+      <video class="section-video" muted playsinline loop preload="metadata" poster="assets/logo.png" aria-label="Background video five"><source src="assets/5.mp4" type="video/mp4"></video>
+      <div class="section-shade sequence-shade"></div>
+      <div class="section-kicker"><span>04 / THE SEQUENCE</span><span>SIX MOMENTS. ONE WORLD.</span></div>
+      <div class="sequence-heading section-content"><h2>IN <span>MOTION</span><sup>06</sup></h2><p>Every frame has a story.<br>Choose a world to explore.</p></div>
+      <div class="scene-grid section-content" id="sceneGrid">
+        <a class="scene-card" href="#home" data-card-scene="0"><span class="scene-image"><video muted playsinline loop preload="metadata" src="assets/1.mp4"></video><span class="card-play">↗</span></span><span class="scene-meta"><span>FRAME 01</span><span class="scene-card-title">THE ARRIVAL</span></span></a>
+        <a class="scene-card" href="#manifesto" data-card-scene="1"><span class="scene-image"><video muted playsinline loop preload="metadata" src="assets/2.mp4"></video><span class="card-play">↗</span></span><span class="scene-meta"><span>FRAME 02</span><span class="scene-card-title">THE FEELING</span></span></a>
+        <a class="scene-card" href="#vision" data-card-scene="2"><span class="scene-image"><video muted playsinline loop preload="metadata" src="assets/3.mp4"></video><span class="card-play">↗</span></span><span class="scene-meta"><span>FRAME 03</span><span class="scene-card-title">THE VISION</span></span></a>
+        <a class="scene-card" href="#craft" data-card-scene="3"><span class="scene-image"><video muted playsinline loop preload="metadata" src="assets/4.mp4"></video><span class="card-play">↗</span></span><span class="scene-meta"><span>FRAME 04</span><span class="scene-card-title">THE CRAFT</span></span></a>
+        <a class="scene-card" href="#sequence" data-card-scene="4"><span class="scene-image"><video muted playsinline loop preload="metadata" src="assets/5.mp4"></video><span class="card-play">↗</span></span><span class="scene-meta"><span>FRAME 05</span><span class="scene-card-title">THE MOTION</span></span></a>
+        <a class="scene-card" href="#finale" data-card-scene="5"><span class="scene-image"><video muted playsinline loop preload="metadata" src="assets/6.mp4"></video><span class="card-play">↗</span></span><span class="scene-meta"><span>FRAME 06</span><span class="scene-card-title">THE AFTERGLOW</span></span></a>
+      </div>
+      <div class="sequence-controls section-content"><span><span class="control-dot"></span> SIX VIDEOS. SIX SECTION BACKGROUNDS.</span><span class="sequence-label">01 — 06 / COMPLETE</span></div>
+      <span class="section-number">05</span>
+    </section>
+
+    <section class="film-section closing" id="finale" data-scene="5">
+      <video class="section-video closing-video" muted playsinline loop preload="metadata" poster="assets/logo.png" aria-label="Background video six"><source src="assets/6.mp4" type="video/mp4"></video>
+      <div class="section-shade closing-overlay"></div>
+      <div class="closing-content section-content"><span class="closing-kicker">THE NEXT FRAME IS YOURS</span><h2>STAY<br><span>CURIOUS.</span></h2><a href="#home" class="button button-light"><span>BACK TO THE BEGINNING</span><span class="button-arrow">↑</span></a></div>
+      <span class="closing-coordinate">VORTEX / FRAME 006</span><span class="section-number">06</span>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <a class="footer-brand" href="#home" aria-label="Vortex — back to top">VORTEX<span>✳</span></a>
+      <p class="footer-note">A little less ordinary.<br><span>A lot more alive.</span></p>
+      <a class="footer-up" href="#home">BACK TO TOP <span>↑</span></a>
+    </div>
+    <div class="footer-social-block">
+      <div class="footer-social-heading"><span>LET'S CONNECT</span><p>Find me around the web.</p></div>
+      <nav class="footer-socials" aria-label="Social and portfolio links">
+        <a href="https://github.com/MrAbdulSamadDEV" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub <span>↗</span></a>
+        <a href="https://samad.vexr.dev" target="_blank" rel="noopener noreferrer" aria-label="Portfolio website">Portfolio <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/MRABDULSAMADDEV" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn <span>↗</span></a>
+        <a href="https://www.youtube.com/@epicflixplus" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube <span>↗</span></a>
+        <a href="https://x.com/ABDULSAMAD8492" target="_blank" rel="noopener noreferrer" aria-label="X">X <span>↗</span></a>
+        <a href="https://www.instagram.com/samad_boy.dev" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram <span>↗</span></a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> VORTEX CREATIVE SYSTEMS</span>
+      <span>AN EXPERIMENT IN MOTION.</span>
+      <nav aria-label="Footer navigation"><a href="#home">HOME</a><a href="#manifesto">STORY</a><a href="#sequence">WORLDS</a></nav>
+    </div>
+  </footer>
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+</body>
+</html>
